@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Texto en pantalla / On-screen text -->
+    <TextView
+        android:id="@+id/cont_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Bienvenido/a. \n\nPor favor, ingrese cualquier texto en el campo abajo:"
+        android:textColor="#8000FF"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        />
+
+    <!-- Campo de entrada para texto normal / Input field for normal text -->
+    <EditText
+        android:id="@+id/extraer_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Ingrese cualquier texto."
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        />
+
+    <!-- Botón de confirmación / Confirmation button -->
+    <Button
+        android:id="@+id/btn_confirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="@string/btnl_ok"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/lightgray"
+        android:textColor="@color/black"
+        />
+</LinearLayout>
