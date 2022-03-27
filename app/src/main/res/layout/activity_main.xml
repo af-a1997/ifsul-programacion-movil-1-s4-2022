@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_long"
+        android:textSize="22sp"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/purple" />
+
+    <!--
+        ES: Me dí cuenta que si el texto es más largo que el ancho de la pantalla, el mismo no se auto ajusta para mostrarse en múltiples líneas, así que agregué la propiedad [Ellipsize] según lo sugerido en: https://stackoverflow.com/questions/9885535/how-to-do-text-wrapping-for-long-text-in-text-view-on-android
+
+        EN: I noticed that if the text is larger than the width of the screen, it's not automatically constrained to display on multiple lines, so I added the [Ellipsize] property, as suggested on the website above.
+    -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Estas son las diferentes actividades que realicé para el curso de programación móvil en IFSul."
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:ellipsize="none"
+        />
+
+    <!--
+        Posible solución para colocar botones lado a lado/Possible solution to place buttons next to each other: https://code2care.org/pages/two-buttons-next-to-each-other-in-android-layout
+     -->
+    <TableRow
+        android:id="@+id/ytbl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:id="@+id/a2_1"
+            android:text="@string/act2_1"
+            android:backgroundTint="@color/lightgray"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/a2_2"
+            android:text="@string/act2_2"
+            android:backgroundTint="@color/lightgray"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"/>
+    </TableRow>
+    <Button
+        android:id="@+id/a3"
+        android:text="@string/act3"
+        android:backgroundTint="@color/lightgray"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/a4"
+        android:text="@string/act4"
+        android:backgroundTint="@color/lightgray"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/a5"
+        android:text="@string/act5"
+        android:backgroundTint="@color/lightgray"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/a6"
+        android:text="@string/act6"
+        android:backgroundTint="@color/lightgray"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/a7"
+        android:text="@string/act7"
+        android:backgroundTint="@color/lightgray"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/a8"
+        android:text="@string/act8"
+        android:backgroundTint="@color/lightgray"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="La actividad final de evaluación fue colocada en una rama separada del repositorio."
+        android:textColor="@color/darkyellow"
+        android:background="@color/lightyellow"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:ellipsize="none"
+        />
+</LinearLayout>

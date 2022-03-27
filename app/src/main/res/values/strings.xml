@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Hub actividades</string>
+    <string name="app_name_long">Hub de actividades de Programación Móvil</string>
+
+    <string name="act2_1">Actividad 2.1</string>
+    <string name="act2_2">Actividad 2.2</string>
+    <string name="act3">Actividad 3</string>
+    <string name="act4">Actividad 4</string>
+    <string name="act5">Actividad 5</string>
+    <string name="act6">Actividad 6</string>
+    <string name="act7">Actividad 7</string>
+    <string name="act8">Actividad 8</string>
+
+    <string name="email">Correo electrónico</string>
+    <string name="str_pwd">Contraseña</string>
+</resources>
