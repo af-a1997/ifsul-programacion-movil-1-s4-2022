@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +24,8 @@ public class Actividad_2 extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad2);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Actividad 2.1");
 
         et_email = (EditText) findViewById(R.id.email_addr);
         et_pwd = (EditText) findViewById(R.id.pwd);
@@ -54,5 +58,26 @@ public class Actividad_2 extends AppCompatActivity implements View.OnClickListen
         else{
             Toast.makeText(getApplicationContext(),"Usuario/Contraseña incorrectos.",Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_acts,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem selected_item){
+        if(selected_item.getItemId() == R.id.menu_btn_a2_2){
+            Intent goto_activity = new Intent(getApplicationContext(),act2_2_base.class);
+            startActivity(goto_activity);
+            return true;
+        }
+        else if(selected_item.getItemId() == R.id.menu_btn_a2_1){
+            Toast.makeText(getApplicationContext(),"Ya estás en este ejercicio.",Toast.LENGTH_LONG).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(selected_item);
     }
 }

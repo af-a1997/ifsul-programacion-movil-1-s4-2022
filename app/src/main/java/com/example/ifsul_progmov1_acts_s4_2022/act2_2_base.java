@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class act2_2_base extends AppCompatActivity implements View.OnClickListener {
     private TextView returned_value = (TextView) findViewById(R.id.new_value);
@@ -17,6 +20,7 @@ public class act2_2_base extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act22_base);
+        getSupportActionBar().setTitle("Actividad 2.2");
     }
 
     /*
@@ -44,5 +48,26 @@ public class act2_2_base extends AppCompatActivity implements View.OnClickListen
         }
 
         returned_value.setText("Valor = " + returned_value_n);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_acts,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem selected_item){
+        if(selected_item.getItemId() == R.id.menu_btn_a2_1){
+            Intent goto_activity = new Intent(getApplicationContext(),Actividad_2.class);
+            startActivity(goto_activity);
+            return true;
+        }
+        else if(selected_item.getItemId() == R.id.menu_btn_a2_2){
+            Toast.makeText(getApplicationContext(),"Ya estás en este ejercicio.",Toast.LENGTH_LONG).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(selected_item);
     }
 }

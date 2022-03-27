@@ -33,7 +33,7 @@
 
     <!--
         Posible solución para colocar botones lado a lado/Possible solution to place buttons next to each other: https://code2care.org/pages/two-buttons-next-to-each-other-in-android-layout
-     -->
+    -->
     <TableRow
         android:id="@+id/ytbl1"
         android:layout_width="wrap_content"
@@ -60,15 +60,6 @@
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"/>
     </TableRow>
-    <Button
-        android:id="@+id/a3"
-        android:text="@string/act3"
-        android:backgroundTint="@color/lightgray"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/a4"
@@ -123,12 +114,14 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="La actividad final de evaluación fue colocada en una rama separada del repositorio."
+        android:text="El proyecto perteneciente a la actividad final será colocado en un repositorio separado."
         android:textColor="@color/darkyellow"
         android:background="@color/lightyellow"
         android:textSize="22sp"
         android:textAlignment="center"
         android:layout_marginTop="20dp"
         android:ellipsize="none"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         />
 </LinearLayout>

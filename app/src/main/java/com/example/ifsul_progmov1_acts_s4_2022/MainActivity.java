@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btA2;
@@ -32,5 +35,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             startActivity(v_intent);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_acts,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem selected_item){
+        if(selected_item.getItemId() == R.id.menu_btn_a2_1){
+            Intent goto_activity = new Intent(getApplicationContext(),Actividad_2.class);
+            startActivity(goto_activity);
+            return true;
+        }
+        else if(selected_item.getItemId() == R.id.menu_btn_a2_2){
+            Intent goto_activity = new Intent(getApplicationContext(),act2_2_base.class);
+            startActivity(goto_activity);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(selected_item);
     }
 }

@@ -13,6 +13,7 @@ public class act2_login_success extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act2_login_success);
+        getSupportActionBar().setTitle("Actividad 2.1");
 
         if(savedInstanceState!=null){
             save_email = savedInstanceState.getString("kEmail_reg");
