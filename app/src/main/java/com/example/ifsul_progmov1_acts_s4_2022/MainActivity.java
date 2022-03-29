@@ -8,19 +8,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btA2;
+    private Button btA2_1, btA2_2, btA4_1, btA4_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btA2 = (Button) findViewById(R.id.a2_1);
+        btA2_1 = (Button) findViewById(R.id.a2_1);
+        btA2_2 = (Button) findViewById(R.id.a2_2);
+        btA4_1 = (Button) findViewById(R.id.a4_1);
+        btA4_2 = (Button) findViewById(R.id.a4_2);
 
-        btA2.setOnClickListener(this);
+        btA2_1.setOnClickListener(this);
+        btA2_2.setOnClickListener(this);
+        btA4_1.setOnClickListener(this);
+        btA4_2.setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +37,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if(view.getId()==R.id.a2_2){
             Intent v_intent = new Intent(this, act2_2_base.class);
+
+            startActivity(v_intent);
+        }
+        else if(view.getId()==R.id.a4_1){
+            Intent v_intent = new Intent(this, Actividad4_1.class);
+
+            startActivity(v_intent);
+        }
+        else if(view.getId()==R.id.a4_2){
+            Intent v_intent = new Intent(this, Actividad4_2.class);
 
             startActivity(v_intent);
         }

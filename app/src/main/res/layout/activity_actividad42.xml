@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Actividad4_2">
+
+    <EditText
+        android:id="@+id/field_init_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese valor a convertir"
+        android:fontFamily="monospace"
+        android:inputType="numberDecimal"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Desde → Hacia"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="21sp"
+        android:textStyle="bold"/>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <RadioGroup
+            android:id="@+id/field_convert_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/f_currency_from_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_UYU"/>
+                <RadioButton
+                    android:id="@+id/f_currency_from_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_USD"/>
+                <RadioButton
+                    android:id="@+id/f_currency_from_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_BRL"/>
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/field_convert_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp">
+            <RadioButton
+                android:id="@+id/f_currency_to_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currency_UYU"/>
+            <RadioButton
+                android:id="@+id/f_currency_to_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currency_USD"/>
+            <RadioButton
+                android:id="@+id/f_currency_to_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currency_BRL"/>
+        </RadioGroup>
+    </TableRow>
+
+    <Button
+        android:id="@+id/do_money_conversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lapis_lazuli"
+        android:text="Realizar conversión"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/converted_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        android:ellipsize="none" />
+</LinearLayout>

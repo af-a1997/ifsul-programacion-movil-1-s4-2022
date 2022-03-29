@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/btn_menu_search"
+        android:title="@string/items_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:iconTint="#caf"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"/>
+
+    <item
+        android:id="@+id/btn_menu_share"
+        android:title="@string/items_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:iconTint="#cfc"
+        app:showAsAction="always"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"/>
+</menu>

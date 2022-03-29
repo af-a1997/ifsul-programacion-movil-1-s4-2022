@@ -60,16 +60,32 @@
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"/>
     </TableRow>
-
-    <Button
-        android:id="@+id/a4"
-        android:text="@string/act4"
-        android:backgroundTint="@color/lightgray"
-        android:textColor="@color/black"
+    <TableRow
+        android:id="@+id/ytbl2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        >
+        <Button
+            android:id="@+id/a4_1"
+            android:text="@string/act4_1"
+            android:backgroundTint="@color/lightgray"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/a4_2"
+            android:text="@string/act4_2"
+            android:backgroundTint="@color/lightgray"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"/>
+    </TableRow>
 
     <Button
         android:id="@+id/a5"

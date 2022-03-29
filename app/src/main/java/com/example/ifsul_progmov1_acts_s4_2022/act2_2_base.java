@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class act2_2_base extends AppCompatActivity implements View.OnClickListener {
-    private TextView returned_value = (TextView) findViewById(R.id.new_value);
+    private TextView returned_value = findViewById(R.id.new_value);
     private Button btn_gen_value = (Button) findViewById(R.id.generate_value);
 
     @Override
@@ -21,6 +21,8 @@ public class act2_2_base extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act22_base);
         getSupportActionBar().setTitle("Actividad 2.2");
+
+        btn_gen_value.setOnClickListener(this);
     }
 
     /*
