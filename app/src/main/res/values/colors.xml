@@ -14,6 +14,7 @@
     <color name="lightyellow">#FFFFCC</color>
     <color name="darkyellow">#666600</color>
     <color name="purple">#8000FF</color>
+    <color name="amethyst">#9966cc</color>
     <color name="lime">#BBFF44</color>
     <color name="ruby">#900</color>
     <color name="lapis_lazuli">#26619C</color>
@@ -21,4 +22,5 @@
     <color name="dark_oak">#402000</color>
     <color name="jungle_tree">#624A33</color>
     <color name="light_brown">#DCBEA0</color>
+    <color name="dark_mustard">#4C4600</color>
 </resources>
