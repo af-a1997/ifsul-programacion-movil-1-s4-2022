@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Actividad5_1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Elija un tipo de plano que desee ver (marco, linear o relativo):"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@color/mn_blue"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/btn_see_layout_1"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mn_blue"
+        android:textColor="@color/white"
+        android:text="FrameLayout"
+        android:layout_gravity="center" />
+    <Button
+        android:id="@+id/btn_see_layout_2"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mn_blue"
+        android:textColor="@color/white"
+        android:text="LinearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" />
+    <Button
+        android:id="@+id/btn_see_layout_3"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mn_blue"
+        android:textColor="@color/white"
+        android:text="RelativeLayout"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>

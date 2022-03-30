@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IFSul_ProgMov1_Acts_S42022">
         <activity
+            android:name=".Actividad6"
+            android:exported="false" />
+        <activity
+            android:name=".Actividad5_2"
+            android:exported="false" />
+        <activity
+            android:name=".Actividad5_1_L3"
+            android:exported="false" />
+        <activity
+            android:name=".Actividad5_1_L2"
+            android:exported="false" />
+        <activity
+            android:name=".Actividad5_1_L1"
+            android:exported="false" />
+        <activity
+            android:name=".Actividad5_1"
+            android:exported="false" />
+        <activity
             android:name=".act2_2_getval"
             android:exported="false" />
         <activity

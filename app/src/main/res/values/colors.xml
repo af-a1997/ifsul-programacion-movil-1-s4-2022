@@ -17,4 +17,8 @@
     <color name="lime">#BBFF44</color>
     <color name="ruby">#900</color>
     <color name="lapis_lazuli">#26619C</color>
+    <color name="mn_blue">#191970</color>
+    <color name="dark_oak">#402000</color>
+    <color name="jungle_tree">#624A33</color>
+    <color name="light_brown">#DCBEA0</color>
 </resources>

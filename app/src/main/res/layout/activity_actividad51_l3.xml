@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Actividad5_1_L3"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/icon_user"
+        android:src="@drawable/ic_baseline_person_24"
+        android:layout_width="32dp"
+        android:layout_height="32dp"/>
+    <EditText
+        android:id="@+id/field_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon_user"
+        android:inputType="text"
+        android:hint="Username" />
+
+    <ImageView
+        android:id="@+id/icon_pwd"
+        android:src="@drawable/ic_baseline_lock_24"
+        android:layout_below="@+id/icon_user"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:id="@+id/field_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon_pwd"
+        android:layout_below="@+id/icon_user"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btn_login_5_L3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mn_blue"
+        android:text="Log-in"
+        android:layout_below="@+id/field_pwd"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>
