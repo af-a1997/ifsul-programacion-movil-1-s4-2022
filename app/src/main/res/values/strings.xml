@@ -26,4 +26,12 @@
     <string name="currency_UYU">Peso Uruguayo (UYU)</string>
     <string name="currency_USD">Dólar Estadounidense (USD)</string>
     <string name="currency_BRL">Real Brasileño (BRL)</string>
+
+    <!-- Actividades: 7 -->
+    <string-array name="courses">
+        <item>Informática para Internet</item>
+        <item>Tecnólogo en Análisis y Desarrollo de Sistemas</item>
+        <item>Tecnólogo en Sistemas de Energías Renovables</item>
+    </string-array>
+    <!-- Esto es un arreglo de hilos de texto / This is a string array -->
 </resources>

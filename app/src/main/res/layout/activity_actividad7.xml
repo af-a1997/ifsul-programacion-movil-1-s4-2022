@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Actividad7">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/act7"
+        android:textColor="@color/purple"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresa los datos en el siguiente formulario, al presionar [Guardar], serán registrados en la base de datos SQLite local."
+        android:textAlignment="center"
+        android:background="@color/lightyellow"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/a7_i_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Ingresa tu nombre"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Mail"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/a7_i_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Ingresa tu dirección de E-Mail."
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clave"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/a7_i_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Asigna una contraseña para la cuenta"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curso"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <!--
+        I wanted to use a dropdown here, so I found a tutorial at: https://code.tutsplus.com/ (cannot link it directly since I get an error due to two dashes next to each other in the URL, but the tutorial is really well explained and helpful).
+
+        The spinner is just designed here, and given the ID. The rest of the wizardry is done on the class.
+    -->
+    <Spinner
+        android:id="@+id/a7_i_courses"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown" />
+
+    <!-- drawableLeft is a property that adds an icon to the left of the button's label, similarly, you can add an icon to the other 3 sides of the button (top, right and bottom).
+
+    More info: https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-2-user-experience/lesson-4-user-interaction/4-1-c-buttons-and-clickable-images/4-1-c-buttons-and-clickable-images.html -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_a7_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gold"
+            android:textColor="@color/black"
+            android:text="Guardar"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:layout_marginRight="5dp" />
+        <Button
+            android:id="@+id/btn_a7_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gold"
+            android:textColor="@color/black"
+            android:text="Listar alumnos"
+            android:drawableLeft="@drawable/ic_baseline_storage_24" />
+    </TableRow>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Área de peligro"
+        android:textColor="@color/ruby"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp" />
+    <Button
+        android:id="@+id/btn_a7_wipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/ruby"
+        android:textColor="@color/white"
+        android:text="Vaciar DDBB"
+        android:drawableLeft="@drawable/ic_baseline_delete_sweep_24"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
