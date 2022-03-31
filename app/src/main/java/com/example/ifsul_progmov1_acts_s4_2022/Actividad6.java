@@ -8,15 +8,16 @@ import android.view.View;
 import android.widget.Button;
 
 public class Actividad6 extends AppCompatActivity implements View.OnClickListener {
+    private Button btn_frag1, btn_frag2, btn_frag3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad6);
 
-        Button btn_frag1 = (Button) findViewById(R.id.btn_see_fragments_p1);
-        Button btn_frag2 = (Button) findViewById(R.id.btn_see_fragments_p2);
-        Button btn_frag3 = (Button) findViewById(R.id.btn_see_fragments_p3);
+        btn_frag1 = findViewById(R.id.btn_see_fragments_p1);
+        btn_frag2 = findViewById(R.id.btn_see_fragments_p2);
+        btn_frag3 = findViewById(R.id.btn_see_fragments_p3);
 
         btn_frag1.setOnClickListener(this);
         btn_frag2.setOnClickListener(this);

@@ -15,6 +15,11 @@ import android.widget.Toast;
 import java.util.InputMismatchException;
 
 public class Actividad4_2 extends AppCompatActivity {
+    private Button GEB_submit;
+    private EditText GEF_value;
+    private RadioButton GRB_cfrom, GRB_cto;
+    private RadioGroup GRG_cfrom, GRG_cto;
+    private TextView GTV_out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +44,11 @@ public class Actividad4_2 extends AppCompatActivity {
         double brl2usd = 4.79;  // 1 BRL = 4.79 USD
 
         // Retrieve UI elements:
-        EditText GEF_value = (EditText) findViewById(R.id.field_init_money);
-        TextView GTV_out = (TextView) findViewById(R.id.converted_currency);
-        Button GEB_submit = (Button) findViewById(R.id.do_money_conversion);
-        RadioGroup GRG_cfrom = (RadioGroup) findViewById(R.id.field_convert_from);
-        RadioGroup GRG_cto = (RadioGroup) findViewById(R.id.field_convert_to);
+        GEF_value = findViewById(R.id.field_init_money);
+        GTV_out = findViewById(R.id.converted_currency);
+        GEB_submit = findViewById(R.id.do_money_conversion);
+        GRG_cfrom = findViewById(R.id.field_convert_from);
+        GRG_cto = findViewById(R.id.field_convert_to);
 
         // Trigger conversion upon clicking the button.
         GEB_submit.setOnClickListener(new View.OnClickListener() {
@@ -51,8 +56,8 @@ public class Actividad4_2 extends AppCompatActivity {
             public void onClick(View view) {
                 int GRV_cfrom = GRG_cfrom.getCheckedRadioButtonId();
                 int GRV_cto = GRG_cto.getCheckedRadioButtonId();
-                RadioButton GRB_cfrom = (RadioButton) findViewById(GRV_cfrom);
-                RadioButton GRB_cto = (RadioButton) findViewById(GRV_cto);
+                GRB_cfrom = findViewById(GRV_cfrom);
+                GRB_cto = findViewById(GRV_cto);
 
                 double CONV_money_init = 0.0;
                 double CONV_money_rslt = 0.0;

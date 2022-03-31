@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Actividad5_2 extends AppCompatActivity {
+    private TextView print_result;
+    private Button calc_result;
+    private EditText weight, height;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +20,10 @@ public class Actividad5_2 extends AppCompatActivity {
 
         // Fuente de la fórmula / Formula source: https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html#Interpreted
 
-        TextView print_result = findViewById(R.id.bmi_result);
-        Button calc_result = findViewById(R.id.btn_calc_bmi);
-        EditText weight = findViewById(R.id.in_weight);
-        EditText height = findViewById(R.id.in_height);
+        print_result = findViewById(R.id.bmi_result);
+        calc_result = findViewById(R.id.btn_calc_bmi);
+        weight = findViewById(R.id.in_weight);
+        height = findViewById(R.id.in_height);
 
         calc_result.setOnClickListener(new View.OnClickListener() {
             @Override

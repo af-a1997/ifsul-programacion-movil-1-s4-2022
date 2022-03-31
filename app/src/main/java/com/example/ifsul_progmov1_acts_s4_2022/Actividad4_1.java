@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class Actividad4_1 extends AppCompatActivity {
     private ShareActionProvider set_sap;
     private String shared_text = "N/A";
+    private MenuItem get_search_btn, get_share_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +27,13 @@ public class Actividad4_1 extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_act4_1,menu);
 
         // Retrieves and gives functionality to search button added on [menu/menu_act4_1_.xml]:
-        MenuItem get_search_btn = menu.findItem(R.id.btn_menu_search);
+        get_search_btn = menu.findItem(R.id.btn_menu_search);
         SearchView sv = (SearchView) get_search_btn.getActionView();
         sv.setOnQueryTextListener(onSearch());
 
         // Retrieves and gives functionality to share button added on [menu/menu_act4_1_.xml]:
         /*
-        MenuItem get_share_btn = menu.findItem(R.id.btn_menu_share);
+        get_share_btn = menu.findItem(R.id.btn_menu_share);
         set_sap = (ShareActionProvider) MenuItemCompat.getActionProvider(get_share_btn);
         set_sap.setShareIntent(setupSendIntent());
         */

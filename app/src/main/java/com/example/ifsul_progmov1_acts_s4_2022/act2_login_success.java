@@ -23,7 +23,7 @@ public class act2_login_success extends AppCompatActivity {
         save_email = rcv_data.getString("kEmail");
         String rcv_data_pwd = rcv_data.getString("kPwd");
 
-        output_text_welcome = (TextView) findViewById(R.id.str_welcome);
+        output_text_welcome = findViewById(R.id.str_welcome);
 
         output_text_welcome.setText("Bienvenido/a, " + save_email + ".\n\nTu clave es: " + rcv_data_pwd);
     }
