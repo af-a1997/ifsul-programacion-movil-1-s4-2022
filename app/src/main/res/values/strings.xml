@@ -34,4 +34,7 @@
         <item>Tecnólogo en Sistemas de Energías Renovables</item>
     </string-array>
     <!-- Esto es un arreglo de hilos de texto / This is a string array -->
+
+    <!-- Actividades: 8 -->
+    <string name="a8_link_ioc_ccodes">Ingresa el código IOC del país para obtener algunos de sus datos (<a href="https://en.wikipedia.org/wiki/List_of_IOC_country_codes#Current_NOCs">toca aquí para ver la lista de códigos</a>):</string>
 </resources>

@@ -10,21 +10,22 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btA2_1, btA2_2, btA4_1, btA4_2, btA5_1, btA5_2, btA6, btA7;
+    private Button btA2_1, btA2_2, btA4_1, btA4_2, btA5_1, btA5_2, btA6, btA7, btA8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btA2_1 = (Button) findViewById(R.id.a2_1);
-        btA2_2 = (Button) findViewById(R.id.a2_2);
-        btA4_1 = (Button) findViewById(R.id.a4_1);
-        btA4_2 = (Button) findViewById(R.id.a4_2);
-        btA5_1 = (Button) findViewById(R.id.a5_1);
-        btA5_2 = (Button) findViewById(R.id.a5_2);
-        btA6 = (Button) findViewById(R.id.a6);
-        btA7 = (Button) findViewById(R.id.a7);
+        btA2_1 = findViewById(R.id.a2_1);
+        btA2_2 = findViewById(R.id.a2_2);
+        btA4_1 = findViewById(R.id.a4_1);
+        btA4_2 = findViewById(R.id.a4_2);
+        btA5_1 = findViewById(R.id.a5_1);
+        btA5_2 = findViewById(R.id.a5_2);
+        btA6 = findViewById(R.id.a6);
+        btA7 = findViewById(R.id.a7);
+        btA8 = findViewById(R.id.a8);
 
         btA2_1.setOnClickListener(this);
         btA2_2.setOnClickListener(this);
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btA5_2.setOnClickListener(this);
         btA6.setOnClickListener(this);
         btA7.setOnClickListener(this);
+        btA8.setOnClickListener(this);
     }
 
     @Override
@@ -75,6 +77,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if(view.getId()==R.id.a7){
             Intent v_intent = new Intent(this, Actividad7.class);
+
+            startActivity(v_intent);
+        }
+        else if(view.getId()==R.id.a8){
+            Intent v_intent = new Intent(this, Actividad8.class);
 
             startActivity(v_intent);
         }

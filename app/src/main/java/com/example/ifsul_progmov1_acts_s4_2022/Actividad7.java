@@ -57,7 +57,7 @@ public class Actividad7 extends AppCompatActivity implements View.OnClickListene
 
             a7e_db.register_data(a7e_i);
 
-            Toast.makeText(getApplicationContext(),"Estudiante registrado",Toast.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(),"Estudiante registrado",Toast.LENGTH_LONG).show();
 
             // I was going to make the button temporarily unavailable but I couldn't exactly figure how to do that.
             // b_save.setEnabled(false);
