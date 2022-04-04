@@ -24,12 +24,11 @@ public class Actividad_2 extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad2);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Actividad 2.1");
 
-        et_email = (EditText) findViewById(R.id.email_addr);
-        et_pwd = (EditText) findViewById(R.id.pwd);
-        btn_login = (Button) findViewById(R.id.btn_login);
+        et_email = findViewById(R.id.email_addr);
+        et_pwd = findViewById(R.id.pwd);
+        btn_login = findViewById(R.id.btn_login);
 
         btn_login.setOnClickListener(this);
     }

@@ -39,9 +39,9 @@ public class Actividad4_2 extends AppCompatActivity {
         double uyu2usd = 0.02;  // 1 UYU = 0.02 USD
         double uyu2brl = 0.11;  // 1 UYU = 0.11 BRL
         double usd2uyu = 40.3;  // 1 USD = 40.3 UYU
-        double usd2brl = 0.2;   // 1 USD =  0.2 BRL
+        double usd2brl = 4.79;  // 1 USD = 4.79 BRL
         double brl2uyu = 7.8;   // 1 BRL =  7.8 UYU
-        double brl2usd = 4.79;  // 1 BRL = 4.79 USD
+        double brl2usd = 0.2;   // 1 BRL =  0.2 USD
 
         // Retrieve UI elements:
         GEF_value = findViewById(R.id.field_init_money);

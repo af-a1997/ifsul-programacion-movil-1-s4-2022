@@ -51,6 +51,12 @@
             android:name=".act2_2_getval"
             android:exported="false" />
         <activity
+            android:name=".Actividad4_2"
+            android:exported="false" />
+        <activity
+            android:name=".Actividad4_1"
+            android:exported="false" />
+        <activity
             android:name=".act2_2_base"
             android:exported="false" />
         <activity

@@ -89,7 +89,7 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/ytbl2"
+        android:id="@+id/ytbl3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -148,7 +148,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="El proyecto perteneciente a la actividad final será colocado en un repositorio separado."
+        android:text="El proyecto perteneciente a la actividad final será colocado en un repositorio separado. La actividad 1 está en una rama secundaria del repositorio, la actividad 3 es el menú que aparece en las primeras 2 actividades."
         android:textColor="@color/darkyellow"
         android:background="@color/lightyellow"
         android:textSize="22sp"

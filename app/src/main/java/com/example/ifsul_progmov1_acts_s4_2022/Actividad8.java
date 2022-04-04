@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,6 +22,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -84,9 +89,34 @@ public class Actividad8 extends AppCompatActivity implements View.OnClickListene
         @Override
         protected void onPostExecute(String s) {
             try {
-                JSONObject json_obj = new JSONObject(s);
+                JSONArray json_arr = new JSONArray(s);
+                JSONObject json_obj;
+                List<String> json2list = new ArrayList<String>();
 
-                tv_out_country_data.setText("En " + json_obj.getString("nativeName.spa.official") + " viven "  + json_obj.getString("population") +  " personas.");
+                //System.out.println(s);
+
+                System.out.println("\n");
+                for(int x = 0; x < json_arr.length(); x++){
+                    json_obj = json_arr.getJSONObject(x);
+
+                    if(x==0) {
+                        json2list.add(json_obj.getString("name"));
+                        json2list.add(json_obj.getString("capital"));
+                        json2list.add(json_obj.getString("population"));
+                    }
+                }
+
+                String receive_list_conts[] = new String[3];
+                for(int hh = 0; hh < 3; hh++){
+                    receive_list_conts[hh] = json2list.get(hh);
+                }
+
+                JSONObject country_aliases = new JSONObject(receive_list_conts[0]);
+                String str_country_info = "Ese es el código para " + country_aliases.getString("official") + ", cuya capital es " + receive_list_conts[1] + ". Este país tiene un total aproximado de " + receive_list_conts[2] + " habitante(s).";
+
+                tv_out_country_data.setText(str_country_info);
+
+                // tv_out_country_data.setText(test);
             } catch (JSONException e) {
                 e.printStackTrace();
             }

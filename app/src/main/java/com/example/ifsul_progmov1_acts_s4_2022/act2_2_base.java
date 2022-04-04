@@ -38,10 +38,11 @@ public class act2_2_base extends AppCompatActivity implements View.OnClickListen
     public void onClick(View view) {
         Intent act_gen_result = new Intent(this,act2_2_getval.class);
 
-        // I know it's deprecated but it's for the sake of the exercise's guidelines.
+        // startActivityForResult() is deprecated but it's used for the sake of the exercise's guidelines and for learning.
         startActivityForResult(act_gen_result,1);
     }
 
+    // If the secondary activity generates a result, retrieves it and prints it on the base activity (this one).
     protected void onActivityResult(int req_code,int rslt_code,Intent intent_data){
         super.onActivityResult(req_code,rslt_code,intent_data);
         int returned_value_n = 0;
@@ -55,12 +56,14 @@ public class act2_2_base extends AppCompatActivity implements View.OnClickListen
         returned_value.setText("Valor = " + returned_value_n);
     }
 
+    // Do this when the menu is created.
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_acts,menu);
         return true;
     }
 
+    // Do this each time an item from the menu is selected.
     @Override
     public boolean onOptionsItemSelected(MenuItem selected_item){
         if(selected_item.getItemId() == R.id.menu_btn_a2_1){

@@ -60,6 +60,7 @@ public class Actividad7 extends AppCompatActivity implements View.OnClickListene
             Toast.makeText(getApplicationContext(),"Estudiante registrado",Toast.LENGTH_LONG).show();
 
             // I was going to make the button temporarily unavailable but I couldn't exactly figure how to do that.
+
             // b_save.setEnabled(false);
         }
         else if(view.getId()==R.id.btn_a7_list){
@@ -72,7 +73,7 @@ public class Actividad7 extends AppCompatActivity implements View.OnClickListene
             startActivity(i_reg_students);
         }
         else if(view.getId()==R.id.btn_a7_wipe){
-            Toast.makeText(getApplicationContext(),"Not implemented yet.",Toast.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(),"Función no implementada.",Toast.LENGTH_LONG).show();
         }
     }
 }

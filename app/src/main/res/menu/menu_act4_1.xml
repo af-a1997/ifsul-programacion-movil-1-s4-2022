@@ -7,7 +7,7 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:iconTint="#caf"
         app:showAsAction="always"
-        app:actionViewClass="android.widget.SearchView"/>
+        app:actionViewClass="android.widget.SearchView" />
 
     <item
         android:id="@+id/btn_menu_share"
@@ -15,5 +15,5 @@
         android:icon="@drawable/ic_baseline_share_24"
         android:iconTint="#cfc"
         app:showAsAction="always"
-        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"/>
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider" />
 </menu>

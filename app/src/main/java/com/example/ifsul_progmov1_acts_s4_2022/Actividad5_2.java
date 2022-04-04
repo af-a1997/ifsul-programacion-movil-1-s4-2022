@@ -2,11 +2,14 @@ package com.example.ifsul_progmov1_acts_s4_2022;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Actividad5_2 extends AppCompatActivity {
     private TextView print_result;
@@ -28,25 +31,34 @@ public class Actividad5_2 extends AppCompatActivity {
         calc_result.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double v_weight = Double.parseDouble(weight.getText().toString());
-                double v_height = Integer.getInteger(height.getText().toString());
-                double bmi = v_weight / (Math.pow(v_height,2));
-                String cat = "";
+                if(!TextUtils.isEmpty(height.getText().toString()) && !TextUtils.isEmpty(weight.getText().toString())){
+                    double v_weight = Double.parseDouble(weight.getText().toString());
+                    double v_height = Integer.parseInt(height.getText().toString());
+                    double bmi = v_weight / (Math.pow(v_height/100,2));
+                    String cat = "";
 
-                if(bmi < 18.5){
-                    cat = "peso está por debajo de lo apropiado";
-                }
-                else if(bmi >= 18.5 && bmi <= 24.9){
-                    cat = "tienes un peso apropiado";
-                }
-                else if(bmi >= 25 && bmi <= 29.9){
-                    cat = "tienes sobrepeso";
-                }
-                else if(bmi >= 30){
-                    cat = "eres obeso";
-                }
+                    // parseColor() needs to receive full HEX code (it can't be shortened like in CSS), otherwise the app will crash.
+                    if(bmi < 18.5){
+                        cat = "peso está por debajo de lo apropiado";
+                        print_result.setTextColor(Color.parseColor("#AA00AA"));
+                    }
+                    else if(bmi >= 18.5 && bmi <= 24.9){
+                        cat = "tienes un peso apropiado";
+                        print_result.setTextColor(Color.parseColor("#00AA00"));
+                    }
+                    else if(bmi >= 25 && bmi <= 29.9){
+                        cat = "tienes sobrepeso";
+                        print_result.setTextColor(Color.parseColor("#00AAAA"));
+                    }
+                    else if(bmi >= 30){
+                        cat = "eres obeso";
+                        print_result.setTextColor(Color.parseColor("#AA0000"));
+                    }
 
-                print_result.setText("Tu IMC es de " + bmi + ", y tu " + cat + ".");
+                    print_result.setText(String.format("Tu IMC es de %.2f, y tu ",bmi) + cat + ".");
+                }
+                else
+                    Toast.makeText(getApplicationContext(),"Rellene todos los campos",Toast.LENGTH_LONG).show();
             }
         });
     }
